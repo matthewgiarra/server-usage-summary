@@ -28,7 +28,7 @@
 # matthew.giarra@gmail.com
 #
 # This line creates the subject line for the email.
-SUBJECT="$(echo "Aether Lab server usage summary for $(date +"%m-%d-%Y, %T")")"
+SUBJECT="$(echo "Aether Lab server usage summary for $(date +"%m-%d-%Y")")"
 
 # Specify the email recipient.
 # Once I get permissions to send emails

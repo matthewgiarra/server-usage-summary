@@ -35,7 +35,9 @@ SUBJECT="$(echo "Aether Lab server usage summary for $(date +"%m-%d-%Y, %T")")"
 # to the Aether list serve,
 # change this line to EMAIL_RECIPIENT=aether-list
 # or whatever is the correct recipient to message the group.
-EMAIL_RECIPIENT=mgiarra
+# Currently the list aether_list is specified in the
+# file /home/shannon/a/aether/.mailrc
+EMAIL_RECIPIENT=aether_list
 
 # Now call the usage measurement program and email it to the listserv.
 /home/shannon/a/aether/.bin/server-usage-summary/measure_aether_disk_usage | mailx -s "$SUBJECT" $EMAIL_RECIPIENT 

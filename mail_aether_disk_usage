@@ -40,5 +40,5 @@ SUBJECT="$(echo "Aether Lab server usage summary for $(date +"%m-%d-%Y")")"
 EMAIL_RECIPIENT=aether_list
 
 # Now call the usage measurement program and email it to the listserv.
-/home/shannon/a/aether/.bin/server-usage-summary/measure_aether_disk_usage | mailx -s "$SUBJECT" -c "mgiarra,bhattac3,bjun,chakrab3,guo246,mbrindis,meyers18,pvlachos,saramide,xu427,zhan1589"
+/home/shannon/a/aether/.bin/server-usage-summary/measure_aether_disk_usage | mailx -s "$SUBJECT" mgiarra $EMAIL_RECIPIENT
 

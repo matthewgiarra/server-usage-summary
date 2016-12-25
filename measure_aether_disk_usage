@@ -1,0 +1,20 @@
+#!/bin/bash
+# 
+# This shell script measures and prints a summary of disk usage on the Aether storage servers at Purdue University. 
+# The script can be run as a stand-alone program. However, the purpose of writing this was to periodically and automatically call it using cron, and send the output via email to the lab list serve using a command-line email client like mailx.
+#
+# Written by
+# Matthew Giarra
+# December 25, 2016
+# (Merry Christmas)
+# matthew.giarra@gmail.com
+#
+# Write some text.
+echo "This is an automated message."
+echo "Below is a summary of the current utilization of disk space on the Aether lab servers."
+
+# Get the current date
+date
+
+# Measure the size of all the filesystems mounted at /home/shannon
+df -h /home/shannon/*

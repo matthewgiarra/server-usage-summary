@@ -14,7 +14,7 @@
 # disk usage on the servers, add the 
 # following line to the crontab file:
 #
-# 00 00 * * 0 /home/shannon/a/aether/.bin/mail_aether_disk_usage
+# 00 00 * * 0 /home/shannon/a/aether/.bin/server-usage-summary/mail_aether_disk_usage
 #
 # See the crontab documentation 
 # for details about what the digits and asterisks mean,
@@ -38,5 +38,5 @@ SUBJECT="$(echo "Aether Lab server usage summary for $(date +"%m-%d-%Y, %T")")"
 EMAIL_RECIPIENT=mgiarra
 
 # Now call the usage measurement program and email it to the listserv.
-/home/shannon/a/aether/.bin/measure_aether_disk_usage | mailx -s "$SUBJECT" $EMAIL_RECIPIENT 
+/home/shannon/a/aether/.bin/server-usage-summary/measure_aether_disk_usage | mailx -s "$SUBJECT" $EMAIL_RECIPIENT 
 
